@@ -45,22 +45,18 @@ spring.jpa.properties.hibernate.format_sql=true
 
 ▶️ Como Executar o Projeto
 Clone o repositório:
-
-bash
-Copiar
-Editar
+```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
-Importe o projeto em sua IDE.
+```
 
+Importe o projeto em sua IDE.
 Execute a aplicação:
 
-bash
-Copiar
-Editar
+```bash
 mvn spring-boot:run
-A aplicação ficará disponível por padrão em:
+```
 
-arduino
-Copiar
-Editar
+A aplicação ficará disponível por padrão em:
+```bash
 http://localhost:8080
+```
