@@ -1,62 +1,37 @@
-📋 Descrição do Projeto
-Este é um projeto de API RESTful desenvolvido com Spring Boot, com autenticação via JWT (JSON Web Token) e controle de acesso baseado em roles (admin e user). O objetivo é fornecer uma aplicação web simples com cadastro de usuários, autenticação segura e controle de permissões por perfil.
+# Projeto Java - Autenticação JWT com Spring Boot
 
----
+Este é um projeto Java utilizando Spring Boot, com autenticação baseada em JWT (JSON Web Token) e controle de acesso por papéis (roles): `USER` e `ADMIN`.
 
-✅ Cadastro de Usuários
-Registro de novos usuários com:
-Nome
-E-mail
-Senha (armazenada de forma segura com hash)
-Role: user ou admin
+## ✅ Funcionalidades
 
-✅ Autenticação com JWT
-Login com validação de credenciais.
-Geração de token JWT após login bem-sucedido.
-Requisições aos endpoints protegidos devem conter o token JWT válido no cabeçalho Authorization.
+- Cadastro de usuários
+- Login e geração de token JWT
+- Segurança com Spring Security
+- Controle de acesso baseado em roles
+- Filtro de autenticação para proteger endpoints
 
----
+## 🧰 Tecnologias utilizadas
 
-🛠️ Tecnologias Utilizadas
-Java 17
-Spring Boot
-Spring Security
-JWT (JSON Web Token)
-Spring Data JPA
-MySQL (Banco de dados relacional)
+- Java 17
+- Spring Boot
+- Spring Security
+- JWT (jjwt)
+- MySQL (configurável)
+- Maven
 
----
+## 🔧 Como rodar o projeto
 
-Configuração do Banco de Dados (MySQL):
-1. Crie um banco de dados:
+1. Instale o JDK 17
+2. Crie um banco de dados MySQL chamado `demo` (ou altere no `application.properties`)
+3. Clone o projeto e abra no IntelliJ
+4. Configure o `application.properties` com suas credenciais do MySQL:
 
-CREATE DATABASE spring_jwt_demo;
-
-2. Configure as credenciais no arquivo application.properties ou application.yml:
-spring.datasource.url=jdbc:mysql://localhost:3306/spring_jwt_demo
-spring.datasource.username=seu_usuario
-spring.datasource.password=sua_senha
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/demo
+spring.datasource.username=root
+spring.datasource.password=senha
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.format_sql=true
-
-
----
-
-▶️ Como Executar o Projeto
-Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
 ```
 
-Importe o projeto em sua IDE.
-Execute a aplicação:
-
-```bash
-mvn spring-boot:run
-```
-
-A aplicação ficará disponível por padrão em:
-```bash
-http://localhost:8080
-```
+5. Rode o projeto pelo método main da classe DemoApplication
